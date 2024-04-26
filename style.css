@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.ex-container {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  gap: 10px;
+  height: 50%;
+  width: 80%;
+}
+
+.ex-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1cfcb;
+}
+
+.ex {
+  padding: 0;
+  background-color: #d1cfcb;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+}
+
+.ex:hover {
+  color: #ffffff;
+}
+
+.ex-modal {
+  position: absolute;
+  width: 75%;
+  height: 60%;
+  background-color: #d1cfcb;
+  border: 2px black solid;
+  z-index: 3;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 2;
+}
