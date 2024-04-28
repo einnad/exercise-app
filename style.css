@@ -21,14 +21,16 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #d1cfcb;
+  border-radius: 5px;
 }
 
 .ex {
-  padding: 0;
+  padding: 10px;
   background-color: #d1cfcb;
   border: none;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 30px;
+  font-size: 36px;
+  border-radius: 5px;
 }
 
 .ex:hover {
@@ -71,3 +73,12 @@ body {
   backdrop-filter: blur(3px);
   z-index: 2;
 }
+
+/* bg images */
+
+/* walk Photo by Tobi: https://www.pexels.com/photo/person-stands-on-brown-pathway-631986/ */
+/* run Photo by Tirachard Kumtanom: https://www.pexels.com/photo/woman-lacing-up-her-gray-and-pink-nike-low-top-athletic-shoe-601177/ */
+/* cycle Photo by Haydan As-soendawy: https://www.pexels.com/photo/white-mountain-bike-2883462/ */
+/* swim Photo by Pixabay: https://www.pexels.com/photo/close-up-photo-of-swimming-rope-261185/ */
+/* gym Photo by Leon Ardho: https://www.pexels.com/photo/barbell-on-the-floor-1552252/ */
+/* football Photo by Florian Thomschke : https://www.pexels.com/photo/close-up-of-a-soccer-ball-in-the-goal-19436350/ */

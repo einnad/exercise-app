@@ -1,12 +1,13 @@
 // elements
-const exButton = document.querySelectorAll(".ex");
+const exButtons = document.querySelectorAll(".ex");
 const closeModalButton = document.querySelector(".close-modal");
 
 const exModal = document.querySelector(".ex-modal");
 const overlay = document.querySelector(".overlay");
+const exInputs = document.querySelector("ex-item");
 
 // events
-exButton.forEach((button) => {
+exButtons.forEach((button) => {
   button.addEventListener("click", () => {
     exModal.classList.add("ex-modal-open");
     overlay.classList.remove("hidden");
@@ -32,3 +33,14 @@ function closeModal() {
   exModal.classList.remove("ex-modal-open");
   overlay.classList.add("hidden");
 }
+
+// attribute testing
+exButtons.forEach((input) => {
+  const activity = input.value;
+  // console.log(activity);
+  // console.log(typeof activity);
+  const el = document.querySelector(`.${activity}`);
+  console.log(el);
+  el.style.backgroundImage = `url(/img/${activity}.jpg)`;
+  el.style.backgroundSize = "cover";
+});
