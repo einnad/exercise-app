@@ -55,18 +55,29 @@ submitExModal.addEventListener("click", (e) => {
       mood = inputMood[i].value;
     }
   }
+
+  workouts.push({
+    date: new Date(),
+    description: description,
+    duration: duration,
+    mood: mood,
+  });
+  displayWorkouts();
   closeModal();
 });
 
 // display workouts
-workouts.forEach((w) => {
-  el = `<div><p>${w.date}</p>
-    <p>${w.description}</p>
-    <p>${w.duration}</p>
-    <p>${w.mood}</p></div>`;
+function displayWorkouts() {
+  workoutsContainer.innerHTML = "";
+  workouts.forEach((w) => {
+    el = `<div><p>${w.date}</p>
+      <p>${w.description}</p>
+      <p>${w.duration}</p>
+      <p>${w.mood}</p></div>`;
 
-  workoutsContainer.insertAdjacentHTML("beforeend", el);
-});
+    workoutsContainer.insertAdjacentHTML("beforeend", el);
+  });
+}
 
 // closing modal
 document.addEventListener("keydown", (e) => {
@@ -87,3 +98,5 @@ function closeModal() {
   exModal.classList.remove("ex-modal-open");
   overlay.classList.add("hidden");
 }
+
+displayWorkouts();
