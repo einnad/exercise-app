@@ -13,6 +13,8 @@
     <title>Exercise App</title>
   </head>
   <body>
+    <h1>Exercise App</h1>
+
     <div class="ex-container">
       <div class="ex-item walk">
         <button class="ex" name="activity" value="walk">Walk</button>
@@ -43,11 +45,6 @@
       <label for="duration">Duration/Distance</label>
       <input type="text" name="duration" />
 
-      <label for="intensity">Intensity</label>
-      <input type="radio" name="intensity" value="Low" />
-      <input type="radio" name="intensity" value="Medium" />
-      <input type="radio" name="intensity" value="High" />
-
       <label for="mood">Mood status</label>
       <input type="radio" name="mood" value="Unhappy" />
       <input type="radio" name="mood" value="Average" />
@@ -56,6 +53,8 @@
       <button type="submit" class="submit-ex-modal">Save</button>
     </form>
     <div class="overlay hidden"></div>
+
+    <div class="workouts"></div>
     <script src="script.js"></script>
   </body>
 </html>

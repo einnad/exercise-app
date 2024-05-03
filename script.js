@@ -6,11 +6,27 @@ const submitExModal = document.querySelector(".submit-ex-modal");
 const exModal = document.querySelector(".ex-modal");
 const overlay = document.querySelector(".overlay");
 const exInputs = document.querySelector("ex-item");
+const workoutsContainer = document.querySelector(".workouts");
 
 const inputDescription = document.getElementsByName("description");
 const inputDuration = document.getElementsByName("duration");
-const inputIntensity = document.getElementsByName("intensity");
 const inputMood = document.getElementsByName("mood");
+
+// variables
+const workouts = [
+  {
+    date: "19/07/2023",
+    description: "Walk around the park",
+    duration: "1 hour",
+    mood: "Happy",
+  },
+  {
+    date: "09/10/2023",
+    description: "Weight training",
+    duration: "30 minutes",
+    mood: "Average",
+  },
+];
 
 // events
 exButtons.forEach((button) => {
@@ -34,17 +50,22 @@ submitExModal.addEventListener("click", (e) => {
   description = inputDescription[0].value;
   duration = inputDuration[0].value;
 
-  for (let i = 0; i < inputIntensity.length; i++) {
-    if (inputIntensity[i].checked) {
-      intensity = inputIntensity[i].value;
-    }
-  }
-
   for (let i = 0; i < inputMood.length; i++) {
     if (inputMood[i].checked) {
       mood = inputMood[i].value;
     }
   }
+  closeModal();
+});
+
+// display workouts
+workouts.forEach((w) => {
+  el = `<div><p>${w.date}</p>
+    <p>${w.description}</p>
+    <p>${w.duration}</p>
+    <p>${w.mood}</p></div>`;
+
+  workoutsContainer.insertAdjacentHTML("beforeend", el);
 });
 
 // closing modal
