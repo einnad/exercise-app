@@ -2,6 +2,7 @@
 const exButtons = document.querySelectorAll(".ex");
 const closeModalButton = document.querySelector(".close-modal");
 const submitExModal = document.querySelector(".submit-ex-modal");
+// const deleteWorkout = document.querySelector(".delete-wo");
 
 const exModal = document.querySelector(".ex-modal");
 const overlay = document.querySelector(".overlay");
@@ -15,18 +16,22 @@ const inputMood = document.getElementsByName("mood");
 // variables
 const workouts = [
   {
+    id: "1",
     date: "19/07/2023",
     description: "Walk around the park",
     duration: "1 hour",
     mood: "Happy",
   },
   {
+    id: "2",
     date: "09/10/2023",
     description: "Weight training",
     duration: "30 minutes",
     mood: "Average",
   },
 ];
+
+let id = 2;
 
 // events
 exButtons.forEach((button) => {
@@ -57,7 +62,8 @@ submitExModal.addEventListener("click", (e) => {
   }
 
   workouts.push({
-    date: new Date(),
+    id: getNewId(),
+    date: new Date().toLocaleDateString(),
     description: description,
     duration: duration,
     mood: mood,
@@ -66,17 +72,30 @@ submitExModal.addEventListener("click", (e) => {
   closeModal();
 });
 
+// delete testing
+function deleteWorkout() {
+  workouts = workouts.filter((w) => {
+    return w.id !== deleteId;
+  });
+  displayWorkouts();
+}
+
 // display workouts
 function displayWorkouts() {
   workoutsContainer.innerHTML = "";
   workouts.forEach((w) => {
-    el = `<div><p>${w.date}</p>
+    el = `<div class="wo-box"><p>${w.date}</p>
       <p>${w.description}</p>
       <p>${w.duration}</p>
-      <p>${w.mood}</p></div>`;
+      <p>${w.mood}</p>
+      <button class="delete-wo" value="${w.id}">X</button></div>`;
 
     workoutsContainer.insertAdjacentHTML("beforeend", el);
   });
+}
+
+function getNewId() {
+  return id++ + "";
 }
 
 // closing modal

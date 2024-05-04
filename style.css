@@ -75,8 +75,18 @@ h1 {
 }
 
 .workouts {
+  gap: 5px;
+}
+
+.wo-box {
   display: flex;
-  gap: 10px;
+  gap: 5px;
+}
+
+.delete-wo {
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
 
 .hidden {
