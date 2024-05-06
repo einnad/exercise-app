@@ -2,7 +2,7 @@
 const exButtons = document.querySelectorAll(".ex");
 const closeModalButton = document.querySelector(".close-modal");
 const submitExModal = document.querySelector(".submit-ex-modal");
-// const deleteWorkout = document.querySelector(".delete-wo");
+const deleteButtons = document.querySelector(".delete-wo");
 
 const exModal = document.querySelector(".ex-modal");
 const overlay = document.querySelector(".overlay");
@@ -49,7 +49,7 @@ exButtons.forEach((button) => {
   el.style.backgroundSize = "cover";
 });
 
-// submitting form testing
+// submit form
 submitExModal.addEventListener("click", (e) => {
   e.preventDefault();
   description = inputDescription[0].value;
@@ -72,13 +72,14 @@ submitExModal.addEventListener("click", (e) => {
   closeModal();
 });
 
-// delete testing
-function deleteWorkout() {
-  workouts = workouts.filter((w) => {
-    return w.id !== deleteId;
-  });
-  displayWorkouts();
-}
+// // delete testing
+// function deleteWorkout() {
+//   workouts = workouts.filter((w) => {
+//     console.log(w.id);
+//     return w.id !== deleteId;
+//   });
+//   displayWorkouts();
+// }
 
 // display workouts
 function displayWorkouts() {
@@ -87,8 +88,7 @@ function displayWorkouts() {
     el = `<div class="wo-box"><p>${w.date}</p>
       <p>${w.description}</p>
       <p>${w.duration}</p>
-      <p>${w.mood}</p>
-      <button class="delete-wo" value="${w.id}">X</button></div>`;
+      <p>${w.mood}</p></div>`;
 
     workoutsContainer.insertAdjacentHTML("beforeend", el);
   });

@@ -13,48 +13,55 @@
     <title>Exercise App</title>
   </head>
   <body>
-    <h1>Exercise App</h1>
+    <div class="mobile">
+      <h1>Exercise App</h1>
 
-    <div class="ex-container">
-      <div class="ex-item walk">
-        <button class="ex" name="activity" value="walk">Walk</button>
+      <div class="mobile-inner">
+        <div class="ex-container">
+          <div class="ex-item walk">
+            <button class="ex" name="activity" value="walk">Walk</button>
+          </div>
+          <div class="ex-item run">
+            <button class="ex" name="activity" value="run">Run</button>
+          </div>
+          <div class="ex-item cycle">
+            <button class="ex" name="activity" value="cycle">Cycle</button>
+          </div>
+          <div class="ex-item swim">
+            <button class="ex" name="activity" value="swim">Swim</button>
+          </div>
+          <div class="ex-item gym">
+            <button class="ex" name="activity" value="gym">Gym</button>
+          </div>
+          <div class="ex-item football">
+            <button class="ex" name="activity" value="football">
+              Football
+            </button>
+          </div>
+        </div>
+
+        <form class="ex-modal">
+          <button class="close-modal">X</button>
+
+          <label for="description">Description</label>
+          <input type="text" name="description" />
+
+          <label for="duration">Duration/Distance</label>
+          <input type="text" name="duration" />
+
+          <label for="mood">Mood status</label>
+          <input type="radio" name="mood" value="Unhappy" />
+          <input type="radio" name="mood" value="Average" />
+          <input type="radio" name="mood" value="Happy" />
+
+          <button type="submit" class="submit-ex-modal">Save</button>
+        </form>
+        <div class="overlay hidden"></div>
+
+        <div class="workouts"></div>
       </div>
-      <div class="ex-item run">
-        <button class="ex" name="activity" value="run">Run</button>
-      </div>
-      <div class="ex-item cycle">
-        <button class="ex" name="activity" value="cycle">Cycle</button>
-      </div>
-      <div class="ex-item swim">
-        <button class="ex" name="activity" value="swim">Swim</button>
-      </div>
-      <div class="ex-item gym">
-        <button class="ex" name="activity" value="gym">Gym</button>
-      </div>
-      <div class="ex-item football">
-        <button class="ex" name="activity" value="football">Football</button>
-      </div>
+      <p>O O O</p>
     </div>
-
-    <form class="ex-modal">
-      <button class="close-modal">X</button>
-
-      <label for="description">Description</label>
-      <input type="text" name="description" />
-
-      <label for="duration">Duration/Distance</label>
-      <input type="text" name="duration" />
-
-      <label for="mood">Mood status</label>
-      <input type="radio" name="mood" value="Unhappy" />
-      <input type="radio" name="mood" value="Average" />
-      <input type="radio" name="mood" value="Happy" />
-
-      <button type="submit" class="submit-ex-modal">Save</button>
-    </form>
-    <div class="overlay hidden"></div>
-
-    <div class="workouts"></div>
     <script src="script.js"></script>
   </body>
 </html>
