@@ -39,7 +39,7 @@ h1 {
 .ex-container {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-  gap: 30px;
+  gap: 20px;
   height: 50%;
   width: 70%;
   max-width: 1000px;
@@ -49,11 +49,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .ex {
-  padding: 10px;
   background-color: #dff5ff;
   border: none;
   font-family: "Bebas Neue", sans-serif;
@@ -96,6 +95,14 @@ h1 {
   flex-direction: column;
   gap: 10px;
   text-align: center;
+}
+
+.mood-div {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .workouts {
