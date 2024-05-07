@@ -105,6 +105,12 @@ h1 {
   font-weight: 500;
 }
 
+.wo-switch {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
 .workouts {
   gap: 5px;
 }

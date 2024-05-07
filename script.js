@@ -3,6 +3,7 @@ const exButtons = document.querySelectorAll(".ex");
 const closeModalButton = document.querySelector(".close-modal");
 const submitExModal = document.querySelector(".submit-ex-modal");
 const deleteButtons = document.querySelector(".delete-wo");
+const workoutButton = document.querySelector(".wo-switch");
 
 const exModal = document.querySelector(".ex-modal");
 const overlay = document.querySelector(".overlay");
@@ -70,6 +71,11 @@ submitExModal.addEventListener("click", (e) => {
   });
   displayWorkouts();
   closeModal();
+});
+
+workoutButton.addEventListener("click", function () {
+  document.querySelector(".ex-container").classList.toggle("hidden");
+  workoutsContainer.classList.toggle("hidden");
 });
 
 // // delete testing
